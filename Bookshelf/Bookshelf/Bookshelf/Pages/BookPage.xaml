@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bookshelf.Pages.BookPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"
+                       Text="Title"/>
+
+                <Entry Grid.Row="0"
+                       Grid.Column="1"
+                       Text="{Binding Title}"/>
+
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"
+                       Text="Description"/>
+
+                <Entry Grid.Row="1"
+                       Grid.Column="1"
+                       Text="{Binding Description}"/>
+            </Grid>
+
+            <Button x:Name="BtnSave"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Blue"
+                    TextColor="White"
+                    Text="Save"
+                    Clicked="BtnSave_Clicked"/>
+
+            <Button x:Name="BtnCancel"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Red"
+                    TextColor="White"
+                    Text="Cancel"
+                    Clicked="BtnCancel_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
